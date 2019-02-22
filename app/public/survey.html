@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Survey Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="text" class="form-control" id="name" name="name"  placeholder="Enter Name">
+    </div>
+
+    
+
+      <div class="form-group">
+        Pizza is my favorite food
+          <select class="form-control form-control-lg" id="question1">
+              <option value="1">Strongly Disagree</option>
+              <option value="2">Disagree</option>
+              <option value="3">Neutral</option>
+              <option value="4">Agree</option>
+              <option value="5">Strongly Agree</option>
+            </select>
+        </div>
+        <div class="form-group">
+          Football seeason is great
+            <select class="form-control form-control-lg" id="question2">
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Neutral</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+              </select>
+          </div>
+          <div class="form-group">
+            I'm generally happy
+              <select class="form-control form-control-lg" id="question3">
+                  <option value="1">Strongly Disagree</option>
+                  <option value="2">Disagree</option>
+                  <option value="3">Neutral</option>
+                  <option value="4">Agree</option>
+                  <option value="5">Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+              I'm generally a shy person
+                <select class="form-control form-control-lg" id="question4">
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Agree</option>
+                    <option value="5">Strongly Agree</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                Reading is fun
+                  <select class="form-control form-control-lg" id="question5">
+                      <option value="1">Strongly Disagree</option>
+                      <option value="2">Disagree</option>
+                      <option value="3">Neutral</option>
+                      <option value="4">Agree</option>
+                      <option value="5">Strongly Agree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                  I plan on getting married one day
+                    <select class="form-control form-control-lg" id="question6">
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    I like lollipops
+                      <select class="form-control form-control-lg" id="question7">
+                          <option value="1">Strongly Disagree</option>
+                          <option value="2">Disagree</option>
+                          <option value="3">Neutral</option>
+                          <option value="4">Agree</option>
+                          <option value="5">Strongly Agree</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                      I hate rainy days
+                        <select class="form-control form-control-lg" id="question8">
+                            <option value="1">Strongly Disagree</option>
+                            <option value="2">Disagree</option>
+                            <option value="3">Neutral</option>
+                            <option value="4">Agree</option>
+                            <option value="5">Strongly Agree</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                        math is fun
+                          <select class="form-control form-control-lg" id="question9">
+                              <option value="1">Strongly Disagree</option>
+                              <option value="2">Disagree</option>
+                              <option value="3">Neutral</option>
+                              <option value="4">Agree</option>
+                              <option value="5">Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                          I enjoy socializing
+                            <select class="form-control form-control-lg" id="question10">
+                                <option value="1">Strongly Disagree</option>
+                                <option value="2">Disagree</option>
+                                <option value="3">Neutral</option>
+                                <option value="4">Agree</option>
+                                <option value="5">Strongly Agree</option>
+                              </select>
+                          </div>
+
+
+        
+
+    <button type="button" id="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Submit</button>
+</div>
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Here's Your Match!</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h2 id="match-name"></h2>
+        <img id="match-photo" class="img-fluid" src="">
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+// The code in add.js handles what happens when the user clicks the "Add a book" button.
+var chosen = {
+  name: "",
+    photo: "",
+    scores: [],
+  totalDiff: 50
+};
+// When user clicks add-btn
+$('body').on('click','#submit', function() {
+  
+  event.preventDefault();
+  chosen = {
+  name: "",
+    photo: "",
+    scores: ['','','','','','','','','',''],
+  totalDiff: 50
+};
+  // Make a newBook object
+  var newSurvey = {
+    name: $("input[name=name]").val(),
+    photo: "https://womenaccelerators.org/wp-content/uploads/2018/03/default-profile.png",
+    scores: [
+    parseInt($("#question1").val()),
+    parseInt($("#question2").val()),
+    parseInt($("#question3").val()),
+    parseInt($("#question4").val()),
+    parseInt($("#question5").val()),
+    parseInt($("#question6").val()),
+    parseInt($("#question7").val()),
+    parseInt($("#question8").val()),
+    parseInt($("#question9").val()),
+    parseInt($("#question10").val())
+  ]
+  };
+
+  
+   
+
+
+  $.get("/api/friends", newSurvey)
+    // On success, run the following code
+    .then(function(data) {
+      // Log the data we found
+      
+
+      for(var i=0;i<data.length;i++) {
+        for(var j=0;j<newSurvey.scores.length;j++) {
+          var totalDiff = Math.abs(newSurvey.scores[0] - data[i].scores[0]) +
+          Math.abs(newSurvey.scores[1] - data[i].scores[1]) + 
+          Math.abs(newSurvey.scores[2] - data[i].scores[2]) + 
+          Math.abs(newSurvey.scores[3] - data[i].scores[3]) + 
+          Math.abs(newSurvey.scores[4] - data[i].scores[4]) + 
+          Math.abs(newSurvey.scores[5] - data[i].scores[5]) + 
+          Math.abs(newSurvey.scores[6] - data[i].scores[6]) + 
+          Math.abs(newSurvey.scores[7] - data[i].scores[7]) + 
+          Math.abs(newSurvey.scores[8] - data[i].scores[8]) + 
+          Math.abs(newSurvey.scores[9] - data[i].scores[9]);   
+             
+        }
+        data[i].totalDiff = totalDiff;
+        var matchArray = [];
+        matchArray.push(data[i]);
+        for(var k=0;k<matchArray.length;k++) {
+          
+          if (matchArray[k].totalDiff <= chosen.totalDiff) {
+            chosen = matchArray[k];
+          }
+        }
+        
+      }
+      console.log(chosen);
+      $("#match-photo").attr("src", chosen.photo);
+      $("#match-name").text(chosen.name);
+      
+    });
+/*
+    // Send an AJAX POST-request with jQuery
+   $.post("/api/friends", newSurvey)
+    // On success, run the following code
+    .then(function(data) {
+      // Log the data we found
+      console.log(data);
+    });
+
+*/
+});
+
+
+
+</script>
+</body>
+</html>
+
+<style>
+.form-check {
+  display:inline;
+}
+</style>
